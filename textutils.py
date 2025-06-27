@@ -1,7 +1,14 @@
 # text utils
 
+import re
+
+ansi_escape = re.compile(r'\x1B\[[0-?]*[ -/]*[@-~]')
+
+def visible_length(s):
+    return len(ansi_escape.sub('', s))
+
 def connecttext(text1, text2, indent):
-    length = max(map(len, text1.split('\n')))
+    length = max(map(visible_length, text1.split('\n')))
 
     txt = ''
     for i, line in enumerate(text2.split('\n')):
@@ -9,6 +16,6 @@ def connecttext(text1, text2, indent):
             txt += length*' ' + indent*' ' + line + '\n'
         
         else:
-            txt += text1.split('\n')[i] + (length-len(text1.split('\n')[i]))*' ' + indent*' ' + line + '\n'
+            txt += text1.split('\n')[i] + (length-visible_length(text1.split('\n')[i]))*' ' + indent*' ' + line + '\n'
     
     return txt
