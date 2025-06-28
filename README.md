@@ -1,21 +1,25 @@
-![richdata renderer](https://github.com/user-attachments/assets/7c90cccc-c667-44fb-a768-275029e3fb14)
+<h3 align="center"><img src="https://github.com/user-attachments/assets/0114cde3-f7c2-4769-97d6-4cb219f8ef62" alt="welcome text" height="250px"></h3>
 
 # forgefetch
 
 ## what is this
-forgefetch - customizable console fetch. the main feature is renderers.
+forgefetch - fully customizable console fetch
 
 ## how to use
-just run `instance.py`.
+run the program with `python3 main.py`.
 
-## how to install renderer
+## how to install a renderer
 renderer is a .py file contains render func. installation step-by-step:
 1. move your renderer to the forgefetch directory.
 2. enter the name of renderer in `config.json` (`renderer="name"`).
-3. now you can just run `instance.py`!
+
+## how to install an instance
+instance is a .py file contains fetching vars and rendering it. installation step-by-step:
+1. move your instance to the forgefetch directory.
+2. enter the name of instance in `config.json` (`instance="name"`).
 
 ## how to write my own renderer
 you need to write a .py file with func called the same as the file. then, you can use a richdata renderer as reference. it's easy!
 
-## how to customize fetch
-you can import `instance.py` and use already created `Fetch` object `fetchmain` or import `fetch.py` for using it manually.
+## how to write my own instance
+you need to write a .py file with `run()` func that prints fetch. then, you can use a standard instance as reference. it's easy!
