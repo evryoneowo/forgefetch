@@ -3,7 +3,8 @@
 # forgefetch
 
 ## what is this
-forgefetch - fully customizable console fetch
+forgefetch - fully customizable console fetch.
+you can customize it using instances and renderers. write your own or use mine https://github.com/evryoneowo/evryforgefetch
 
 ## how to use
 run the program with `python3 main.py`.
