@@ -1,5 +1,6 @@
 {
     "renderer": "richdata",
+    "instance": "standard",
     "accent_color": "\u001b[38;5;33m",
     "secondary_color": "\u001b[38;5;251m",
     "reset_color": "\u001b[0m",

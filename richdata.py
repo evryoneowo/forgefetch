@@ -12,21 +12,21 @@ def richdata(data, indent, accent, secondary, reset):
             txt += '└ '
             txt += f'{secondary}{key}:{reset}\n'
 
-            if str(data[key]).split('\n'):
-                for datak in str(data[key]).split('\n'):
+            if data[key].split('\n'):
+                for datak in data[key].split('\n'):
                     txt += f'{accent} {indent*' '}{datak}{reset}\n'
             else:
-                txt += f'{accent} {indent*' '}{str(data[key])}{reset}\n'
+                txt += f'{accent} {indent*' '}{data[key]}{reset}\n'
             
             continue
             
         txt += f'{secondary}{key}:{reset}\n'
 
-        if str(data[key]).split('\n'):
-                for datak in str(data[key]).split('\n'):
+        if data[key].split('\n'):
+                for datak in data[key].split('\n'):
                     txt += f'{secondary}│{indent*' '}{accent}{datak}{reset}\n'
         else:
-            txt += f'{secondary}│{indent*' '}{accent}{str(data[key])}{reset}\n'
+            txt += f'{secondary}│{indent*' '}{accent}{data[key]}{reset}\n'
 
         txt += f'{secondary}│{reset}\n'
     
