@@ -20,14 +20,14 @@ ren = False
 ins = False
 renderer = cfg['renderer']
 instance = cfg['instance']
-if not os.path.exists(renderer+'.py'):
+if not os.path.exists('renderers/' + renderer+'.py'):
     print(f'renderer: \033[9m\x1b[1m{ACCENT}{renderer}\x1b[0m\033[9m{RESET}')
 
     ren = True
 else:
     print(f'renderer: {ACCENT}\x1b[1m{renderer}\x1b[0m')
 
-if not os.path.exists(instance+'.py'):
+if not os.path.exists('instances/' + instance+'.py'):
     print(f'instance: \033[9m{ACCENT}\x1b[1m{instance}\x1b[0m\033[9m{RESET}\n')
 
     ins = True
@@ -42,6 +42,6 @@ if ins:
 
 if ren or ins: exit(1)
 
-instance_module = importlib.import_module(instance)
+instance_module = importlib.import_module(f'instances.{instance}')
 
 instance_module.run()
