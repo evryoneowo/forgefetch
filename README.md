@@ -1,4 +1,4 @@
-<h3 align="center"><img src="https://github.com/user-attachments/assets/0114cde3-f7c2-4769-97d6-4cb219f8ef62" alt="welcome text" height="250px"></h3>
+<h3 align="center"><img src="https://github.com/user-attachments/assets/565a0ed8-a593-4c1c-9a40-1a5620b607d0" alt="welcome text" height="250px"></h3>
 
 # forgefetch
 
