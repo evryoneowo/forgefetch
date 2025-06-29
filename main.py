@@ -2,9 +2,13 @@ import json
 import importlib
 import os
 
-VERSION = '1.1'
+VERSION = '1.2'
 
-with open("config.json") as f:
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(BASE_DIR)
+
+home_dir = os.path.expanduser("~")
+with open(os.path.join(home_dir, '.forgefetch')) as f:
     cfg = json.loads(f.read())
 
 ACCENT = cfg['accent_color']
